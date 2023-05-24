@@ -1,6 +1,7 @@
 BINARY_NAME = main.exe
 WATCH_PATH = tmp/$(BINARY_NAME)
 SERVICE_PORT?=5000
+HOST_PORT?=5000
 
 GREEN  := $(shell tput -Txterm setaf 2)
 YELLOW := $(shell tput -Txterm setaf 3)
@@ -27,6 +28,9 @@ watch: ## Run the code with cosmtrek/air to have automatic reload on changes
 ## Docker
 docker-build: ## Use the dockerfile to build the container
 	docker build --rm --tag $(BINARY_NAME) .
+
+docker-run: ## Run the container
+	docker run -p ${HOST_PORT}:${SERVICE_PORT} ${BINARY_NAME}
 
 ## Help:
 help: ## Show this help.

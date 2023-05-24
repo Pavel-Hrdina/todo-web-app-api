@@ -10,4 +10,4 @@ FROM alpine:latest
 LABEL maintainer=numtostr version=0.0.1
 COPY --from=builder /go/src/app/main /main
 EXPOSE 5000
-ENTRYPOINT /main
+ENTRYPOINT ["/main"]
