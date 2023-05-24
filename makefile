@@ -1,6 +1,6 @@
 BINARY_NAME = main.exe
 WATCH_PATH = tmp/$(BINARY_NAME)
-SERVICE_PORT?=3000
+SERVICE_PORT?=5000
 
 GREEN  := $(shell tput -Txterm setaf 2)
 YELLOW := $(shell tput -Txterm setaf 3)
