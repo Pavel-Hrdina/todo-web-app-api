@@ -49,7 +49,7 @@ Make sure you have go 1.18 or higher:
   go get
   ```
 
-* install using 
+* install using makefile
   ```sh
   # make install not yet working
   make install
